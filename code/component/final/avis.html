@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials Section</title>
+<style>
+
+    .testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #274c5b;
+  font-weight: 400;
+  padding: 50px;
+  position: relative;
+  max-height: 500px; /* Adjusted for a smaller section */
+  width: 100%; /* Adjusted to control width */
+  margin: auto; /* Center the section on the page */
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  object-position: center;
+  z-index: -1;
+}
+
+.section-title,
+.section-subtitle,
+.testimonial-text {
+  z-index: 1; /* Ensure text appears above background image */
+}
+.testimonial{
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.client-photo, .quote-icon, .client-rating {
+  width: 115px; /* Adjust size as needed */
+  object-fit: contain;
+  margin: 20px auto; /* Center horizontally */
+}
+.client-rating{
+    width: 30px;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.client-name {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px; /* Adjust spacing between name and rating */
+}
+
+@media (max-width: 991px) {
+  .testimonials-section {
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    width: auto; /* Adjusts width to fit container */
+    padding: 0 20px; /* Adds some padding on smaller screens */
+  }
+
+  .client-photo, .quote-icon, .client-rating {
+    width: 90px; /* Smaller size for smaller screens */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+  <section class="testimonials-section">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c6229697548b7ed445e1edfdc0b84454576e697cb37a45352dfedc9145c7d9d4?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="background-image" alt="" />
+    <header class="section-title">Témoignages</header>
+    <h2 class="section-subtitle">Que disent nos clients ?</h2>
+    <article class="testimonial">
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fdd81855063bbc6cee8a045ffc3699f8f7bcf7d6b2414ab4e306d0aa4a26e43?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="client-photo" alt="Client Photo" />
+      <br>
+      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/03d19764622b7c6336b5d73064daa93811977636cdd1f2b1243a3ea4bfc62786?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="quote-icon" alt="Quote Icon" />
+      <p class="testimonial-text">Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+      <div class="client-info">
+        <p class="client-name">Annie</p>
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/244888e6f84f7307d70beb6e98c5f0f1a7931c2acea7c822c364d8cffe633d16?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="client-rating" alt="Client Rating" />
+      </div>
+    </article>
+  </section>
+</body>
+</html>

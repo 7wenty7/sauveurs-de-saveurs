@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .article-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            height: 300px;
+        }
+
+        .article {
+            position: relative;
+            
+            margin-bottom: 20px;
+            cursor: pointer;
+            width: 400px;
+            height: 300px;
+        }
+
+        .article-image {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .article-image img {
+            width: 400px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .article:hover .article-image img {
+            transform: scale(1.05);
+        }
+
+        .article-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(50%);
+            transition: transform 0.3s ease;
+        }
+
+
+
+        .article-date {
+            position: absolute;
+            top: -160px;
+            right: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 7px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .date-day,
+        .date-month {
+            display: block;
+            color: #df3f32;
+            
+        }
+
+        .date-day {
+            font-size: small;
+            font-weight: bold;
+        }
+
+        .date-month {
+            font-size: smaller;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .author-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .article-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #274c5b;
+            margin: 10px 0;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            color: #525c60;
+            margin-bottom: 15px;
+        }
+
+        .read-more-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #efd372;
+            color: #274c5b;
+            padding: 10px 15px;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: #e0c262;
+        }
+
+        .read-more-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section class="article-container">
+        <article class="article">
+            <div class="article-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/88377bbe6132fd6424ac8bb70d628dfddfde9a2abcc0ca610367bddd6d85bf68?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Article Image">
+            </div>
+            <div class="article-content">
+                <div class="article-date">
+                    <span class="date-day">25</span>
+                    <span class="date-month">Nov</span>
+                </div>
+                <div class="author-info">
+                    <img class="author-image" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdead3250e23d581fccbc8aa76c1e35615473b7479e7f1137ca4db5b208915ba?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Author Image">
+                    <span class="author-name">By Rachi Card</span>
+                </div>
+                <h3 class="article-title">The Benefits of Vitamin D & How to Get It</h3>
+                <p class="article-summary">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                <a href="#" class="read-more-btn">Read More <img class="read-more-icon" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c0844ec91044fb3fa9f6a92a813c34bbb5882bfee5da741a105650d7d8f8468?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt=""></a>
+            </div>
+        </article>
+        <article class="article">
+            <div class="article-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/88377bbe6132fd6424ac8bb70d628dfddfde9a2abcc0ca610367bddd6d85bf68?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Article Image">
+            </div>
+            <div class="article-content">
+                <div class="article-date">
+                    <span class="date-day">25</span>
+                    <span class="date-month">Nov</span>
+                </div>
+                <div class="author-info">
+                    <img class="author-image" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdead3250e23d581fccbc8aa76c1e35615473b7479e7f1137ca4db5b208915ba?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Author Image">
+                    <span class="author-name">By Rachi Card</span>
+                </div>
+                <h3 class="article-title">The Benefits of Vitamin D & How to Get It</h3>
+                <p class="article-summary">Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
+                <a href="#" class="read-more-btn">Read More <img class="read-more-icon" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8c0844ec91044fb3fa9f6a92a813c34bbb5882bfee5da741a105650d7d8f8468?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt=""></a>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

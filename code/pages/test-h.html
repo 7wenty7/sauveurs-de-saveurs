@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Web Layout</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navigation-container {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px 60px;
+        }
+        .navigation-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1596px;
+            gap: 20px;
+        }
+        .brand-logo {
+            width: 199px;
+            max-width: 100%;
+        }
+        .navigation-links {
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            color: #274c5b;
+            font-weight: 700;
+            margin: auto;
+        }
+        .cart-section,
+        .search-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+        }
+        .search-box {
+            border-radius: 36px;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            padding: 5px 60px 5px 5px;
+        }
+        .cart-box {
+            border-radius: 33px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 5px 6px;
+        }
+        .icon {
+            width: 56px;
+        }
+        .cart-text,
+        .search-text {
+            margin: auto;
+            font-size: 18px;
+            color: #274c5b;
+            font-weight: 600;
+        }
+        @media (max-width: 991px) {
+            .navigation-container {
+                padding: 0 20px;
+            }
+            .search-box,
+            .cart-box {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navigation-container">
+        <div class="navigation-content">
+            <nav class="navigation-links">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/86ddbf357dd8e9b3fc6f31a58407300dfa0f0f7f6a481a17802c2c9078f76bca?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="brand-logo" alt="Brand Logo">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Pages</a>
+                <a href="#">Shop</a>
+                <a href="#">Projects</a>
+                <a href="#">News</a>
+            </nav>
+            <div class="search-section">
+                <div class="search-box">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/66d65885a0cda51f2ea73f3f654296de6af908f30b4c1dc19319e51a640a4ec5?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="icon" alt="Search Icon">
+                </div>
+            </div>
+            <div class="cart-section">
+                <div class="cart-box">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6104136ecf033fc568c71d6e7130e5766a703152b41319358df03b53f8ae0b38?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="icon" alt="Cart Icon">
+                    <span class="cart-text">Cart (0)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
