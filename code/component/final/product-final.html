@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updated Product Display</title>
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.product-container {
+  display: flex;
+  max-width: 200px;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.product-card {
+  border-radius: 30px;
+  background-color: #f9f8f8;
+  box-shadow: 0px 5px 8px -5px rgba(0, 0, 0, 0.15),
+              -5px 0px 8px -5px rgba(0, 0, 0, 0.15),
+              5px 0px 8px -5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  width: 100%;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+
+.product-image-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px -5px 8px -5px rgba(0, 0, 0, 0.15),
+              -5px 0px 8px -5px rgba(0, 0, 0, 0.15),
+              5px 0px 8px -5px rgba(0, 0, 0, 0.15);
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  aspect-ratio: 0.63;
+  width: 100%;
+  padding: 29px 30px;
+}
+
+.product-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-label {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  border-radius: 8px;
+  background-color: #df3f32;
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: Open Sans, sans-serif;
+}
+
+.product-info {
+  width: calc(100% - 1px);
+  margin-top: 0px;
+  padding: 10px 30px;
+  position: relative;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 18px;
+  font-family: Open Sans, sans-serif;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.separator {
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 15px;
+}
+
+.product-svg {
+  position: absolute;
+  width: 60px;
+  right: 7px;
+  bottom: 0px;
+}
+
+@media (max-width: 360px) {
+  .product-container {
+    max-width: 300px;
+  }
+}
+
+
+</style>
+</head>
+<body>
+<section class="product-container">
+  <article class="product-card">
+    <div class="product-image-container">
+      <img loading="lazy" src="../../images/SdS Pot grenade.png" alt="Grenade" class="product-image"/>
+      <div class="product-label">ANTI-GASPI</div>
+    </div>
+    <div class="product-info">
+      <div class="product-name">Grenade</div>
+      <div class="separator"></div>
+      <div class="product-description">A fresh and juicy grenade to enjoy with your family and friends.</div>
+      <div class="product-price">6 €</div>
+      <img src="../../images/nutri-a.svg" class="product-svg"  alt="">
+    </div>
+  </article>
+</section>
+</body>
+</html>
