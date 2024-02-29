@@ -9,66 +9,98 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
 <style>
-    :root {
-    --red:rgba(223,63,50) ;
-    --green: rgba(144,188,33);
-    --blue: rgba(39,76,91);
-  }
+:root {
+  --red: rgba(223,63,50);
+  --green: rgba(144,188,33);
+  --blue: rgba(39,76,91);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
 .navigation-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    width: 100%;
-    padding: 20px 20px; /* Add some padding */
-  }
-  
-  .logo {
-    max-width: 120px; /* Adjust logo size */
-  }
-  
-  .menu-text {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Allows the navigation links to take up available space */
-    gap: 20px;
-  }
-  
-  .menu-text a {
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+.menu-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.menu-text a {
+  text-decoration: none;
+  color: var(--blue);
+  padding: 20px;
+  font-weight: 700;
+}
+
+.menu-text a:hover {
+  color: #ff4500;
+}
+
+.actions-wrapper, .cart-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-icon, .profile-icon {
+  width: 35px;
+  object-fit: cover;
+}
+
+.cart {
+  border-radius: 33px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 6px;
+  margin-right: 5px;
+}
+.cart-text {
+margin-top: 5px;
+margin-right: 5px;
+}
+
+@media (max-width: 991px) {
+  .top-bar, .cart-container, .cart, .cart-text {
+    white-space: initial;
     padding: 20px;
-    font-weight: 700;
   }
-  
-  .menu-text a:hover {
-    color: #ff4500;
-    text-decoration: none;
-  }
-  
-  .actions-wrapper {
-    display: flex;
+
+  .content-wrapper {
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
-  
-  .cart-icon, .profile-icon {
-    width: 30px; /* Adjust icon size */
-    aspect-ratio: 1;
-    object-fit: cover;
+
+  .menu-text {
+    flex-direction: column;
   }
+}
+
 </style>
 <title>Document</title>
 </head>
@@ -86,11 +118,13 @@
             <a href="#">FAQ</a>
             <a href="#">Contact</a>
           </div>
-          <div class="actions-wrapper">
-            <a href="#"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/849a3604deaa157df36c2dfda994eaa7b78e2526e2f328e1efa31dee8b1ceff5?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Shopping cart" class="cart-icon" /></a>
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f14cb7866d00bdb795459955c2090128bf046fea4d3320a02377b1716564c33?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="User profile" class="profile-icon" />
+          <div class="cart-container">
+            <div class="cart">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2263e1d2d9f44b01633dcb82d7dd1d24dd915e8170680f25ae5693827d1830df?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="cart-icon" alt="Cart icon" />
+              <div class="cart-text">Cart (0)</div>
+            </div>
           </div>
-        </nav>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/99ca70b8f0787869e29206947c7ac62f6911ff8e310da0de2cb11e1550539a82?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="profile-icon" alt="Profile icon" />
       </header>
 
       
