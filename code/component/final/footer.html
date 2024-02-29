@@ -22,7 +22,7 @@
     align-items: center;
     width: 100%;
     padding: 20px;
-    background: #ffffff;
+    background: #F3F4F6;
   }
   .footer-content {
     display: flex;
@@ -66,7 +66,7 @@
   }
   .contact-details p, .links-list, .image-text {
     color: #525c60;
-    font-size: 18px;
+    font-size: 14px;
     margin: 20px;
   }
   .contact-details p{
@@ -84,6 +84,10 @@
   .links-list ul li {
     text-align: start;
   }
+  a {
+    text-decoration: none;
+    color: #525c60;
+  }
   .footer-copy {
     text-align: center;
     width: 100%;
@@ -94,6 +98,16 @@
   .image-gallery img {
     max-width: 100%;
     height: auto;
+  }
+  .social-medias{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    justify-content: space-evenly;
+  }
+  .social-medias img{
+    width: 30px;
+    margin-top: 20px; 
   }
 </style>
 </head>
@@ -111,6 +125,11 @@
     <div class="footer-section image-gallery" id="gal">
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6be6cc2ce3388b5780be62ee342dca11508073c3ed337acb3017530dcbf64e5e?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Gallery Image">
       <p class="image-text">Simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum simply dummy text of the printing</p>
+      <div class="social-medias">
+        <a href=""><img src="../../images/facebook.svg" alt=""></a>
+        <a href=""><img src="../../images/instagram.svg" alt=""></a>
+        <a href=""><img src="../../images/youtube.svg" alt=""></a>
+      </div>
     </div>
     <div class="footer-section useful-links">
       <h3 class="links-title">Liens utiles</h3>
