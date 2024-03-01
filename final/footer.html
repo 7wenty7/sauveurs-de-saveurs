@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact and Gallery Information</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: #F3F4F6;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid #dddddd;
+    
+  }
+  .footer-section {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    
+  }
+  .footer-section:last-child {
+    border-right: none;
+  }
+  .image-gallery {
+  flex: 4; /* This allows the image gallery section to grow three times as much as the others */
+}
+
+  .contact-info, .image-gallery, .useful-links {
+    padding: 0;
+  }
+  .contact-title, .links-title {
+    color: #274c5b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .links-title{
+    text-align: start;
+  }
+  .contact-title {
+    text-align: end;
+  }
+  .contact-details p, .links-list, .image-text {
+    color: #525c60;
+    font-size: 14px;
+    margin: 20px;
+  }
+  .contact-details p{
+    text-align: end;
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  .links-list ul li {
+    text-align: start;
+  }
+  a {
+    text-decoration: none;
+    color: #525c60;
+  }
+  .footer-copy {
+    text-align: center;
+    width: 100%;
+    color: #525c60;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+  .social-medias{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    justify-content: space-evenly;
+  }
+  .social-medias img{
+    width: 30px;
+    margin-top: 20px; 
+  }
+</style>
+</head>
+<body>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section contact-info">
+      <h2 class="contact-title">Nous contacter</h2>
+      <div class="contact-details">
+        <p class="email"><strong>Email</strong><br>needhelp@Organia.com</p>
+        <p class="phone"><strong>Téléphone</strong><br>06 12 34 56 78</p>
+        <p class="address"><strong>Adresse</strong><br>Montrouge, 92120</p>
+      </div>
+    </div>
+    <div class="footer-section image-gallery" id="gal">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6be6cc2ce3388b5780be62ee342dca11508073c3ed337acb3017530dcbf64e5e?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Gallery Image">
+      <p class="image-text">Simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum simply dummy text of the printing</p>
+      <div class="social-medias">
+        <a href=""><img src="../../images/facebook.svg" alt=""></a>
+        <a href=""><img src="../../images/instagram.svg" alt=""></a>
+        <a href=""><img src="../../images/youtube.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-section useful-links">
+      <h3 class="links-title">Liens utiles</h3>
+      <ul class="links-list">
+        <a href=""><li>A propos</li></a>
+        <a href=""><li>Mon Panier</li></a>
+        <a href=""><li>Mes commandes</li></a>
+        <a href=""><li>FAQ</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright © <strong>Sauveursdesaveurs</strong> | Designed by <strong>Supdeweb-1A</strong></p>
+</footer>
+</body>
+</html>
