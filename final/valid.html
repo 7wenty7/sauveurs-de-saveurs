@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<style>
+    :root {
+        --red: rgba(223,63,50);
+        --green: rgba(144,188,33);
+        --blue: rgba(39,76,91);
+      }
+      
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .navigation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+      }
+      
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      .logo {
+        max-width: 120px;
+      }
+      
+      .menu-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 20px;
+      }
+      
+      .menu-text a {
+        text-decoration: none;
+        color: var(--blue);
+        padding: 20px;
+        font-weight: 700;
+      }
+      
+      .menu-text a:hover {
+        color: #ff4500;
+      }
+      
+      .actions-wrapper, .cart-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      .cart-icon, .profile-icon {
+        width: 35px;
+        object-fit: cover;
+      }
+      
+      .cart {
+        border-radius: 33px;
+        border: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 5px 6px;
+        margin-right: 5px;
+      }
+      .cart-text {
+      margin-top: 5px;
+      margin-right: 5px;
+      }
+      
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: #F3F4F6;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid #dddddd;
+    
+  }
+  .footer-section {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    
+  }
+  .footer-section:last-child {
+    border-right: none;
+  }
+  .image-gallery {
+  flex: 4; /* This allows the image gallery section to grow three times as much as the others */
+}
+
+  .contact-info, .image-gallery, .useful-links {
+    padding: 0;
+  }
+  .contact-title, .links-title {
+    color: #274c5b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .links-title{
+    text-align: start;
+  }
+  .contact-title {
+    text-align: end;
+  }
+  .contact-details p, .links-list, .image-text {
+    color: #525c60;
+    font-size: 14px;
+    margin: 20px;
+  }
+  .contact-details p{
+    text-align: end;
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  .links-list ul li {
+    text-align: start;
+  }
+  a {
+    text-decoration: none;
+    color: #525c60;
+  }
+  .footer-copy {
+    text-align: center;
+    width: 100%;
+    color: #525c60;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+  .social-medias{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    justify-content: space-evenly;
+  }
+  .social-medias img{
+    width: 30px;
+    margin-top: 20px; 
+  }
+
+  
+
+ .banner{
+    position: relative;
+  }
+  .ban{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  .banner img{
+    width: 100%;
+    height: 898px;
+    background-size: contain;
+  }
+  
+  .content2 {
+    margin: 0 50px;
+    margin-top: -50px;
+    background: #ffffff;
+    border-radius: 1.875rem;
+    padding: 4.75rem 5.125rem ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0rem 0.875rem 2.25rem 0rem rgba(204, 204, 204, 0.25);
+  }
+  .main-content {
+    display: block;
+    gap: 1.25rem;
+    justify-content: space-between;
+    
+  }
+  
+  .text-green {
+    color: #7eb693;
+    text-align: left;
+    font-family: "Yellowtail-Regular", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+  }
+  
+  .name-order {
+    color: #274c5b;
+    text-align: left;
+    font-family: "Roboto-ExtraBold", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+    width: 57.1875rem;
+  }
+  .description{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .description p{
+    color: #525c60;
+    text-align: left;
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 15px;
+    line-height: 165.4%;
+    font-weight: 400;
+    width: 50%;
+    
+  }
+  
+  
+  
+  .valid {
+    background: #90bc21;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center
+    
+  
+  }
+  
+  
+  .valid i{
+    color: #ffffff;
+    font-size: 50px;
+    margin: auto;
+  }
+  .content{
+    position:absolute;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    padding: 50px;
+  }
+  .livraison {
+    background: #f1edea;
+    border-radius: 1.875rem;
+    padding: 50px;
+    width: 50%;
+    
+  }
+  .livraison p{  
+    color: #df3f32;
+    text-align: center;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    position: relative;
+  }
+ /* END-Contact Form */
+</style>
+</head>
+<body>
+    <header class="navigation-container">
+        <nav class="content-wrapper">
+          <div class="logo-menu-wrapper">
+            <img src="images/logo.png" alt="Company logo" class="logo" />
+          </div>
+          <div class="menu-text">
+            <a href="home.php">Accueil</a>
+            <a href="#">A Propos</a>
+            <a href="boutique.php">Produits</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="cart-container">
+            <div class="cart">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2263e1d2d9f44b01633dcb82d7dd1d24dd915e8170680f25ae5693827d1830df?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="cart-icon" alt="Cart icon" />
+              <div class="cart-text">Cart (0)</div>
+            </div>
+          </div>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/99ca70b8f0787869e29206947c7ac62f6911ff8e310da0de2cb11e1550539a82?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="profile-icon" alt="Profile icon" />
+      </header>
+
+      <div class="banner">
+        <div class="ban">
+          <img src="images/banner.jpg" alt=""></div>
+            <div class="content2">
+              <div class="main-content">
+                  <div class="text-green">
+                    Merci à notre nouveau sauveur de saveurs
+                </div>
+                  <div class="name-order">Marie</div>
+                  <div class="description">
+                    <p>
+                      Toute l’équipe de sauveurs et saveurs vous remercie de votre
+                      fidélité.
+                      <br />
+                      Simply dummy text of the printing and typesetting industry.
+                      Lorem had ceased to been the industry&#039;s standard dummy text
+                      ever since the 1500s, when an unknown printer took a galley.
+                    </p>
+                  
+                      <div class="valid">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="content">
+          <div class="livraison">
+            <p>
+            QUICK COLLECT : Pour respecter notre mission 100% éco-responsable vos
+            produits seront disponibles en boutique.
+            <br />
+            Nous vous remercions de votre compréhension et de votre soutien dans la
+            démarche éco-responsable.
+          </p>
+        </div>
+        </div>
+        
+        <script src="https://kit.fontawesome.com/01f6ea87d8.js" crossorigin="anonymous"></script>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section contact-info">
+      <h2 class="contact-title">Nous contacter</h2>
+      <div class="contact-details">
+        <p class="email"><strong>Email</strong><br>needhelp@Organia.com</p>
+        <p class="phone"><strong>Téléphone</strong><br>06 12 34 56 78</p>
+        <p class="address"><strong>Adresse</strong><br>Montrouge, 92120</p>
+      </div>
+    </div>
+    <div class="footer-section image-gallery" id="gal">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6be6cc2ce3388b5780be62ee342dca11508073c3ed337acb3017530dcbf64e5e?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Gallery Image">
+      <p class="image-text">Simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum simply dummy text of the printing</p>
+      <div class="social-medias">
+        <a href=""><img src="../../images/facebook.svg" alt=""></a>
+        <a href=""><img src="../../images/instagram.svg" alt=""></a>
+        <a href=""><img src="../../images/youtube.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-section useful-links">
+      <h3 class="links-title">Liens utiles</h3>
+      <ul class="links-list">
+        <a href=""><li>A propos</li></a>
+        <a href=""><li>Mon Panier</li></a>
+        <a href=""><li>Mes commandes</li></a>
+        <a href=""><li>FAQ</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright © <strong>Sauveursdesaveurs</strong> | Designed by <strong>Supdeweb-1A</strong></p>
+</footer>
+</body>
+</html>
