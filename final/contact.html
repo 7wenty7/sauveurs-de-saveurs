@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<style>
+    :root {
+        --red: rgba(223,63,50);
+        --green: rgba(144,188,33);
+        --blue: rgba(39,76,91);
+      }
+      
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .navigation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+      }
+      
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+      }
+      
+      .logo {
+        max-width: 120px;
+      }
+      
+      .menu-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        gap: 20px;
+      }
+      
+      .menu-text a {
+        text-decoration: none;
+        color: var(--blue);
+        padding: 20px;
+        font-weight: 700;
+      }
+      
+      .menu-text a:hover {
+        color: #ff4500;
+      }
+      
+      .actions-wrapper, .cart-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      
+      .cart-icon, .profile-icon {
+        width: 35px;
+        object-fit: cover;
+      }
+      
+      .cart {
+        border-radius: 33px;
+        border: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 5px 6px;
+        margin-right: 5px;
+      }
+      .cart-text {
+      margin-top: 5px;
+      margin-right: 5px;
+      }
+      
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: #F3F4F6;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    border-bottom: 1px solid #dddddd;
+    
+  }
+  .footer-section {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    
+  }
+  .footer-section:last-child {
+    border-right: none;
+  }
+  .image-gallery {
+  flex: 4; /* This allows the image gallery section to grow three times as much as the others */
+}
+
+  .contact-info, .image-gallery, .useful-links {
+    padding: 0;
+  }
+  .contact-title, .links-title {
+    color: #274c5b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px;
+  }
+  .links-title{
+    text-align: start;
+  }
+  .contact-title {
+    text-align: end;
+  }
+  .contact-details p, .links-list, .image-text {
+    color: #525c60;
+    font-size: 14px;
+    margin: 20px;
+  }
+  .contact-details p{
+    text-align: end;
+  }
+
+  .links-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  .links-list ul li {
+    text-align: start;
+  }
+  a {
+    text-decoration: none;
+    color: #525c60;
+  }
+  .footer-copy {
+    text-align: center;
+    width: 100%;
+    color: #525c60;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+  }
+  .social-medias{
+    display: flex;
+    text-align: center;
+    margin: 30px;
+    justify-content: space-evenly;
+  }
+  .social-medias img{
+    width: 30px;
+    margin-top: 20px; 
+  }
+
+  .container { width: 70%; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
+  .contact-section { display: flex; gap: 20px; }
+  .contact-column, .info-column { display: flex; flex-direction: column; line-height: normal; }
+  .contact-column { width: 50%; display: flex; justify-content: center; align-items: center;  padding-top: 50px;}
+  .info-column { width: 50%; margin-left: 20px; }
+  .contact-header, .contact-details { color: #274c5b; font-weight: 800; font-size: 30px; font-family: Roboto, sans-serif; }
+  .contact-text { color: #525c60; margin-top: 14px; font: 400 18px Open Sans, sans-serif; }
+  .info-box { border-radius: 16px; border: 1px solid #eee; background-color: #fff; margin-top: 10px; padding: 12px; width: 404px; max-width: 100%; }
+  .info-content { display: flex; gap: 20px; }
+  .image-container, .content-container { display: flex; flex-direction: column; line-height: normal; }
+  .content-header { color: #274c5b; font-weight: 800; font-size: 25px; font-family: Roboto, sans-serif; }
+  .content-text { color: #525c60; margin-top: 5px; font: 400 18px/165.4% Open Sans, Roboto, Helvetica, sans-serif; }
+  .image { aspect-ratio: 1; object-fit: cover; width: 100%; }
+  .social-media-links { display: flex; gap: 15px; margin-top: 34px; width: 285px; max-width: 100%; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+  .maps{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 30px auto;
+    padding: 0 10px;
+  }
+  /* Contact Form */
+  .form-contact{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 50px auto;
+    padding: 0 10px;
+  }
+#contact-form {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    width: 100%;
+ }
+ 
+ .field-left {
+    width: 50%;
+    display: inline-block;
+    float: left;
+ }
+ 
+ .field-right {
+    width: 50%;
+    display: inline-block;
+ }
+ 
+ .form-title {
+    margin-bottom:10px;
+    color: #274c5b;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: #fdf2e4 0 1px 0;
+ }
+ 
+ .form-field {
+    background: #f3f3f3;
+    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 50px;
+    color: #ababab;
+    border: 1px solid #7eb693;
+    border-radius: 16px;
+    padding-left: 30px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+ }
+ .form-field:focus {
+    background: #fff;
+    color: #725129;
+ }
+ 
+ .form-message {
+    width: 95%;
+ }
+ 
+ .buttons-container {
+    margin: 8px 0;
+    text-align: center;
+    display: flex;
+ }
+ 
+ .buttons {    border: 1px solid #274c5b;
+    background-color: #274c5b;
+    color: #fff;
+    letter-spacing: .03em;
+    text-transform: capitalize;
+    background-image: url(https://assets-global.website-files.com/6205f7e…/6206276…_button-arrow.svg);
+    background-position: 83%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 24px 70px 24px 32px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    transition: all .2s;
+ }
+
+ #banner {
+    height: 250px;
+}
+ /* END-Contact Form */
+</style>
+</head>
+<body>
+    <header class="navigation-container">
+        <nav class="content-wrapper">
+          <div class="logo-menu-wrapper">
+            <img src="images/logo.png" alt="Company logo" class="logo" />
+          </div>
+          <div class="menu-text">
+            <a href="home.php">Accueil</a>
+            <a href="#">A Propos</a>
+            <a href="boutique.php">Produits</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="cart-container">
+            <div class="cart">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2263e1d2d9f44b01633dcb82d7dd1d24dd915e8170680f25ae5693827d1830df?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="cart-icon" alt="Cart icon" />
+              <div class="cart-text">Cart (0)</div>
+            </div>
+          </div>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/99ca70b8f0787869e29206947c7ac62f6911ff8e310da0de2cb11e1550539a82?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="profile-icon" alt="Profile icon" />
+      </header>
+
+      <img  id="banner"src="images/boutique.png" alt="" width="100%">
+
+      <section class="container">
+        <div class="contact-section">
+          <div class="contact-column">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c49bcb60f067b9f846cba86b76bc2127ae99c81869c73e5f53eb370dd0a860ac?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Company building">
+          </div>
+          <div class="info-column">
+            <header>
+              <h1 class="contact-header">Nous serions ravis de discuter
+                  des saveurs</h1>
+            </header>
+            <p class="contact-text">Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+            <div class="info-box">
+              <div class="info-content">
+                <div class="image-container">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9791b8dff560583f86398dd65467260f955d46d78ae157aba7688512045ac377?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Email icon">
+                </div>
+                <div class="content-container">
+                  <h2 class="content-header">Message</h2>
+                  <p class="content-text">contact@sauveursdesaveurs.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="info-content">
+                <div class="image-container">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5d77d359c19c143082dce575fda4256b4aaf94376d8d7339b03482425274686?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Phone icon">
+                </div>
+                <div class="content-container">
+                  <h2 class="content-header">Nous Contacter</h2>
+                  <p class="content-text">06 12 34 56 78</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-media-links">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e73ade09805faa62d1e035608588fbb7f41cd4653627748026705fc8c83c191?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Facebook icon">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc3a66f152ff966688b5dde297dd3d805331b9bc00992a4fd5d2cfc0a8384a46?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Twitter icon">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff7f999a9491ebe047dbb6474bc6e3e615e5a54d74c0081b3becaeef08c3b556?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="Instagram icon">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f34a742f757cfdb62cb8ded0aaf794d5af97bd9fe1b7793c10e92971747dc418?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" class="image" alt="LinkedIn icon">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10508.86505472625!2d2.3059795687304065!3d48.815934991219464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e670ff835b57ff%3A0x40b82c3688b3d70!2s92120%20Montrouge!5e0!3m2!1sfr!2sfr!4v1709287639977!5m2!1sfr!2sfr" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
+      
+          <section class="form-contact"><form id="contact-form">
+      
+              <div class="field-left">
+              
+                  <div class="form-title">Nom*</div>
+                  <input type="text" name="nom" placeholder="Votre Nom" class="form-field">
+              
+                  <div class="form-title">Email*</div>
+                  <input type="email" name="_replyto" placeholder="Entrer votre email" class="form-field">
+              
+              </div>
+              <div class="field-right">
+              
+                  <div class="form-title">Prenom*</div>
+                  <input type="text" name="prenom" placeholder="Votre Prenom" class="form-field">
+              
+                  <div class="form-title">Objet*</div>
+                  <input type="text" name="objet" placeholder="comment pouvons nous aider" class="form-field">
+              
+              </div>
+              
+                  <div class="form-title">Message*</div>
+                  <textarea name="message" rows="50" style="    height: 200px; padding: 30px;" placeholder="bonjour, j'aimerais parler de comment..." class="form-field form-message"></textarea>
+              
+                  <div class="buttons-container">
+                     <input type="submit" value="Envoyer" class="buttons">
+                  </div>
+              
+              </form>
+              
+              </section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section contact-info">
+      <h2 class="contact-title">Nous contacter</h2>
+      <div class="contact-details">
+        <p class="email"><strong>Email</strong><br>needhelp@Organia.com</p>
+        <p class="phone"><strong>Téléphone</strong><br>06 12 34 56 78</p>
+        <p class="address"><strong>Adresse</strong><br>Montrouge, 92120</p>
+      </div>
+    </div>
+    <div class="footer-section image-gallery" id="gal">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6be6cc2ce3388b5780be62ee342dca11508073c3ed337acb3017530dcbf64e5e?apiKey=4cfea3746e614d6c93be1cdc80f131e5&" alt="Gallery Image">
+      <p class="image-text">Simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum simply dummy text of the printing</p>
+      <div class="social-medias">
+        <a href=""><img src="../../images/facebook.svg" alt=""></a>
+        <a href=""><img src="../../images/instagram.svg" alt=""></a>
+        <a href=""><img src="../../images/youtube.svg" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-section useful-links">
+      <h3 class="links-title">Liens utiles</h3>
+      <ul class="links-list">
+        <a href=""><li>A propos</li></a>
+        <a href=""><li>Mon Panier</li></a>
+        <a href=""><li>Mes commandes</li></a>
+        <a href=""><li>FAQ</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-copy">Copyright © <strong>Sauveursdesaveurs</strong> | Designed by <strong>Supdeweb-1A</strong></p>
+</footer>
+</body>
+</html>
