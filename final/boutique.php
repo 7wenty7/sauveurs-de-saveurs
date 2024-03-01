@@ -42,7 +42,7 @@ include 'headerf.html';
       <h3>Retrouvez notre sélection de produits uniques et gourmands</h3>
       <div class="products-grid">
         <?php foreach ($products as $product) : ?>
-          <article class="product-card">
+          <a href="product.php"><article class="product-card">
             <div class="product-image-container">
               <img loading="lazy" src="<?= htmlspecialchars($product['path']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" class="product-image"/>
               <div class="product-label">ANTI-GASPI</div>
@@ -54,10 +54,10 @@ include 'headerf.html';
               <div class="product-price"><?= htmlspecialchars($product['price']) ?> €</div>
               <img src="images/nutri-a.svg" class="product-svg" width="50" height="50" alt="">
             </div>
-          </article>
+          </article></a>
         <?php endforeach; ?>
         <?php foreach ($products as $product) : ?>
-          <article class="product-card">
+          <a href="product.php"><article class="product-card">
             <div class="product-image-container">
               <img loading="lazy" src="<?= htmlspecialchars($product['path']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" class="product-image"/>
               <div class="product-label">ANTI-GASPI</div>
@@ -69,7 +69,7 @@ include 'headerf.html';
               <div class="product-price"><?= htmlspecialchars($product['price']) ?> €</div>
               <img src="images/nutri-a.svg" class="product-svg" width="50" height="50" alt="">
             </div>
-          </article>
+          </article></a>
         <?php endforeach; ?>
       </div>
       <div class="button-container">

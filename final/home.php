@@ -21,9 +21,9 @@ echo '<!DOCTYPE html>
         <img src="images/logo.png" alt="Company logo" class="logo" />
       </div>
       <div class="menu-text">
-        <a href="#">Accueil</a>
+        <a href="home.php">Accueil</a>
         <a href="#">A Propos</a>
-        <a href="#">Produit</a>
+        <a href="boutique.php">Produit</a>
         <a href="#">FAQ</a>
         <a href="#">Contact</a>
       </div>
@@ -94,7 +94,7 @@ echo '<section id="products">
         <h3>Retrouvez notre sélection de produits uniques et gourmands</h3>
         <div class="products-grid">';
 foreach ($products as $product) {
-    echo '<article class="product-card">
+    echo '<a href="product.php"><article class="product-card">
             <div class="product-image-container">
                 <img loading="lazy" src="' . htmlspecialchars($product['path']) . '" alt="'. htmlspecialchars($product['name']) .'" class="product-image"/>
                 <div class="product-label">ANTI-GASPI</div>
@@ -106,7 +106,7 @@ foreach ($products as $product) {
                 <div class="product-price">'. htmlspecialchars($product['price']) .' €</div>
                 <img src="images/nutri-a.svg" class="product-svg" width="50" height="50" alt="">
             </div>
-        </article>';
+        </article></a>';
 }
 echo '</div>
 <div class="button-container">

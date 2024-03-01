@@ -255,7 +255,7 @@ $counter = 0;
 foreach ($products as $product) {
 // Only display the first 3 products
 if ($counter < 3) {
-echo '<article class="product-card">
+echo '<a href="product.php"><article class="product-card">
         <div class="product-image-container">
             <img loading="lazy" src="' . htmlspecialchars($product['path']) . '" alt="'. htmlspecialchars($product['name']) .'" class="product-image"/>
             <div class="product-label">ANTI-GASPI</div>
@@ -267,7 +267,7 @@ echo '<article class="product-card">
             <div class="product-price">'. htmlspecialchars($product['price']) .' €</div>
             <img src="images/nutri-a.svg" class="product-svg" width="50" height="50" alt="">
         </div>
-    </article>';
+    </article></a>';
 // Increment the counter
 $counter++;
 } else {
